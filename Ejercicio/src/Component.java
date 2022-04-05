@@ -25,5 +25,5 @@ public interface Component {
     float getPrecio();
     int getCodigo();
     void setPrecio(Float precio);
-
+    public void printOut();
 }

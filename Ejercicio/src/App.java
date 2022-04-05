@@ -1,7 +1,32 @@
+import java.sql.Array;
+
 public class App {
     public static void main(String[] args) throws Exception {
         //Ejercicio 1
         //utilizamos el patron composite
 
+        Elemento el1 = new Elemento(10, 1); // precio,codigo
+        Elemento el2 = new Elemento(10, 2);
+        Elemento el3 = new Elemento(10, 3);
+        Elemento el4 = new Elemento(10, 4);
+        Elemento el5 = new Elemento(10, 5);// elementos sueltos
+
+        Elemento[] array = new Elemento[3];
+        array[0] = el1;
+        array[1] = el2;
+        array[2] = el3;
+
+        Elemento el123 = new Elemento(123, array); // codigo, componentes, creacion de elemento compuesto
+
+        el123.printOut();
+
+        Kit PackDescuento =  new Kit(321,el123); //codigo, elementos, creacion kit a partir del elemento compuesto
+        PackDescuento.printOut(); // imprimiendo caracteristicas del kit
+        
+        PackDescuento.add(el4);
+        PackDescuento.add(el5);//añadimos los 2 elementos restantes al kit.
+
+        PackDescuento.printOut();
+    
     }
 }

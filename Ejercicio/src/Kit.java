@@ -14,10 +14,12 @@ public class Kit extends Elemento{
 
     public void add(Component component) {
         children.add(component);
+        calcularPrecio();
     }
 
     public void add(Component... components) {
         children.addAll(Arrays.asList(components));
+        calcularPrecio();
     }
     public void remove(Component child) {
         children.remove(child);
@@ -43,9 +45,16 @@ public class Kit extends Elemento{
     for (int i = 0; i < this.children.size(); i++) {
         precio = precio+this.children.get(i).getPrecio();
     }
-      //  this.super.setPrecio(precio*0.9);
       super.setPrecio((float) (precio*0.9));
         return;
+    }
+    public void printOut(){
+
+        System.out.println("Kit de Codigo: "+ super.getCodigo() + " De precio: " + super.getPrecio() );
+        System.out.println("Cuyos componentes son:");
+        for (int i = 0; i < this.children.size(); i++) {
+            children.get(i).printOut();
+        }
     }
 
 }
