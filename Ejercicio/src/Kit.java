@@ -49,7 +49,7 @@ public class Kit extends Elemento{
         return;
     }
     public void printOut(){
-
+        System.out.println("Haciendo Printout de:");
         System.out.println("Kit de Codigo: "+ super.getCodigo() + " De precio: " + super.getPrecio() );
         System.out.println("Cuyos componentes son:");
         for (int i = 0; i < this.children.size(); i++) {

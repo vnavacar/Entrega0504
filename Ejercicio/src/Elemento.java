@@ -56,10 +56,12 @@ public class Elemento implements Component {
     }
     public void remove(Component child) {
         children.remove(child);
+        calcularPrecio();
     }
 
     public void remove(Component... components) {
         children.removeAll(Arrays.asList(components));
+        calcularPrecio();
     }
     public String toString(){
         String returner = "Codigo: "+ this.codigo + " Precio: " + this.precio;

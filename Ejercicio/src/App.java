@@ -1,4 +1,4 @@
-import java.sql.Array;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -9,7 +9,7 @@ public class App {
         Elemento el2 = new Elemento(10, 2);
         Elemento el3 = new Elemento(10, 3);
         Elemento el4 = new Elemento(10, 4);
-        Elemento el5 = new Elemento(10, 5);// elementos sueltos
+        Electrodomestico Lavadora = new Electrodomestico(350, 404);// elementos sueltos
 
         Elemento[] array = new Elemento[3];
         array[0] = el1;
@@ -24,7 +24,7 @@ public class App {
         PackDescuento.printOut(); // imprimiendo caracteristicas del kit
         
         PackDescuento.add(el4);
-        PackDescuento.add(el5);//añadimos los 2 elementos restantes al kit.
+        PackDescuento.add(Lavadora);//añadimos los 2 elementos restantes al kit.
 
         PackDescuento.printOut();
     
