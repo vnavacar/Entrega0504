@@ -8,7 +8,7 @@ public class App {
         Elemento el1 = new Elemento(10, 1); // precio,codigo
         Elemento el2 = new Elemento(10, 2);
         Elemento el3 = new Elemento(10, 3);
-        Elemento el4 = new Elemento(10, 4);
+        Mueble sofa = new Mueble(324, 4);
         Electrodomestico Lavadora = new Electrodomestico(350, 404);// elementos sueltos
 
         Elemento[] array = new Elemento[3];
@@ -23,7 +23,7 @@ public class App {
         Kit PackDescuento =  new Kit(321,el123); //codigo, elementos, creacion kit a partir del elemento compuesto
         PackDescuento.printOut(); // imprimiendo caracteristicas del kit
         
-        PackDescuento.add(el4);
+        PackDescuento.add(sofa);
         PackDescuento.add(Lavadora);//añadimos los 2 elementos restantes al kit.
 
         PackDescuento.printOut();

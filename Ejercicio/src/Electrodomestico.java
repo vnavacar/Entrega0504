@@ -4,7 +4,5 @@ public class Electrodomestico extends Elemento{
         super(precio, codigo);
 
     }
-    public void lavarRopa(){
-        System.out.print("La idea seria hacer metodos mas utiles quizas");
-    }
+
 }
