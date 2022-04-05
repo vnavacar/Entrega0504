@@ -24,6 +24,6 @@ public interface Component {
 	*/
     float getPrecio();
     int getCodigo();
-    void setPrecio(int precio);
-    
+    void setPrecio(Float precio);
+
 }

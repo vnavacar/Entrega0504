@@ -30,6 +30,23 @@ public class Kit extends Elemento{
     public void clear() {
         children.clear();
     }
+    public float getPrecio(){
+        return this.getPrecio();
+    }
+
+
+    public void calcularPrecio(){
+        if (this.children.isEmpty()){
+        return;
+    }
+    float precio=0;
+    for (int i = 0; i < this.children.size(); i++) {
+        precio = precio+this.children.get(i).getPrecio();
+    }
+      //  this.super.setPrecio(precio*0.9);
+      super.setPrecio((float) (precio*0.9));
+        return;
+    }
 
 }
 
